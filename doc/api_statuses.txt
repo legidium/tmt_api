@@ -1,0 +1,87 @@
+API v1 Статусы
+
+1 Статусы активности (activities)
+
+1.1 Статусы активности для ПН
+-------------------------------------------------------
+const STATUS_DRAFT      = 0; // Черновик
+const STATUS_PENDING    = 1; // Ожидает подтверждения
+const STATUS_UNASSIGNED = 2; // Не назначена
+const STATUS_ASSIGNED   = 3; // Назначена
+const STATUS_RUNNING    = 4; // Выполняется
+const STATUS_CHECKING   = 5; // На согласовании
+const STATUS_FAILED     = 6; // Провалена
+const STATUS_COMPLETED  = 7; // Выполнена
+
+1.1 Статусы активности для ПС
+-------------------------------------------------------
+const STATUS_DRAFT          = 0; // Черновик
+const STATUS_PENDING        = 1; // Ожидает подтверждения
+const STATUS_REJECTED       = 2; // Отклонена пользователем
+const STATUS_ACCEPTED       = 3; // Принята для выполнения
+const STATUS_RUNNING        = 4; // Выполняется
+const STATUS_FINISHED       = 5; // Завершена
+const STATUS_FAILED         = 6; // Провалена
+const STATUS_COMPLETED      = 7; // Выполнена
+
+2 Статусы задания (jobs)
+
+2.1 Статусы задания для ПН
+-------------------------------------------------------
+const STATUS_DRAFT      = 0; // Черновик
+const STATUS_PENDING    = 1; // Ожидает подтверждения
+const STATUS_UNASSIGNED = 2; // Не назначено
+const STATUS_ASSIGNED   = 3; // Назначено
+const STATUS_RUNNING    = 4; // Выполняется (только для общих заданий)
+const STATUS_FINISHED   = 5; // Завершено (только для общих заданий)
+const STATUS_FAILED     = 6; // Провалено (только для общих заданий)
+const STATUS_COMPLETED  = 7; // Выполнено (только для общих заданий)
+
+2.2 Статусы задания для ПС
+-------------------------------------------------------
+const STATUS_DRAFT     = 0; // Черновик
+const STATUS_PENDING   = 1; // Ожидает подтверждения
+const STATUS_REJECTED  = 2; // Отклонено
+const STATUS_ACCEPTED  = 3; // Принято для выполнения
+const STATUS_RUNNING   = 4; // Выполняется
+const STATUS_FINISHED  = 5; // Завершено
+const STATUS_FAILED    = 6; // Провалено
+const STATUS_COMPLETED = 7; // Выполнено
+
+2.3 Причины отказа от задания для ПС
+------------------------------------------------------
+const REJECT_TYPE_DRAFT    = 0; // Черновик
+const REJECT_TYPE_VACATION = 1; // Отпуск
+const REJECT_TYPE_ILLNESS  = 2; // Болезнь
+const REJECT_TYPE_OTHER    = 3; // Другое
+
+
+3 Статусы задачи (tasks)
+
+3.1 Статусы задачи для ПС
+-------------------------------------------------------
+(Отсутствуют)
+
+3.2 Статусы задачи для ПС
+-------------------------------------------------------
+const STATUS_DRAFT    = 0; // Черновик
+const STATUS_PENDING  = 1; // Ожидает завершения
+                      = 2; // (Зарезервировано)
+                      = 3; // (Зарезервировано)
+                      = 4; // (Зарезервировано)
+const STATUS_FINISHED = 5; // Завершено
+
+
+4 Статусы отчетов (forms)
+
+4.1 Статусы отчета для ПН
+---------------------------------------------------------------------
+const STATUS_DRAFT       = 0; // Черновик
+const STATUS_UNCONFIRMED = 1; // Форма не подтверждена всеми ПС
+const STATUS_CONFIRMED   = 2; // Форма подтверждена всеми ПС
+
+4.2 Статусы подтвержения отчета от каждого ПС
+---------------------------------------------------------------------
+const STATUS_DRAFT       = 0; // Черновик
+const STATUS_UNCONFIRMED = 1; // Форма не подтверждена
+const STATUS_CONFIRMED   = 2; // Форма подтверждена

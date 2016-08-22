@@ -1,0 +1,139 @@
+{
+  "fields": {
+    "types": [
+      {
+        "name": "scale_5",
+        "title": "Пятибальная шкала"
+      },
+      {
+        "name": "scale_10",
+        "title": "Десятибальная шкала"
+      },
+      {
+        "name": "yes_no",
+        "title": "Да/Нет"
+      },
+      {
+        "name": "yes_no_na",
+        "title": "Да/Нет/Неопределено"
+      },
+      {
+        "name": "number",
+        "title": "Число"
+      },
+      {
+        "name": "number_x_y",
+        "title": "Число X из Y"
+      },
+      {
+        "name": "percent",
+        "title": "Процент"
+      },
+      {
+        "name": "select",
+        "title": "Выбор вариантов"
+      },
+      {
+        "name": "text",
+        "title": "Поле для ввода текста"
+      },
+      {
+        "name": "formula",
+        "title": "Формула"
+      }
+    ]
+  },
+  "form": {
+    "fieldsets": [
+      {
+        "title" : "Осмотр торговой точки (Соответствие ситуации в POS данных ISMS)",
+        "fields": [
+          {
+            "id": 1,
+            "type": "yes_no",
+            "title": "Наличие бренда 'Роза'",
+            "description": "",
+            "checkbox": true
+          },
+          {
+            "id": 2,
+            "type": "number",
+            "title": "Бренд 'Роза' количество SKU на стелажах №267",
+            "description": ""
+          },
+          {
+            "id": 3,
+            "type": "number_x_y",
+            "title": "Бренд 'Роза' представленность на стандартной полке",
+            "description": ""
+          },
+          {
+            "id": 4,
+            "type": "percent",
+            "title": "Процент заполнения с учетом стелажа",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "title" : "Осмотр торговой точки (Соответствие ситуации в POS данных ISMS)",
+        "fields": [
+          {
+            "id": 5,
+            "type": "yes_no",
+            "title": "Параметры торговой точки vs iSMS",
+            "description": "",
+            "values": {
+              "yes": "да",
+              "no": "нет"
+            },
+            "scores": {
+              "yes": 5,
+              "no": 2
+            }
+          },
+          {
+            "id": 5,
+            "type": "yes_no_na",
+            "title": "Параметры торговой точки vs iSMS",
+            "description": "",
+            "values": {
+              "yes": "да",
+              "no": "нет",
+              "na": "n/a"
+            }
+          },
+          {
+            "id": 6,
+            "type": "select",
+            "title": "Availability / OOS / Запас vs iSMS",
+            "description": "",
+            "values": ["эффективно", "неэффективно"]
+          },
+          {
+            "id": 7,
+            "type": "scale_5",
+            "title": "Оценка внутренней планограммы",
+            "description": ""
+          },
+          {
+            "id": 8,
+            "type": "scale_10",
+            "title": "Оценка актуальности прайс-листа",
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "values": [
+      {"id": 1, "value": "1" },
+      {"id": 2, "value": "0" },
+      {"id": 3, "value": "12;122"},
+      {"id": 4, "value": "10" },
+      {"id": 5, "value": "-1" },
+      {"id": 6, "value": "0" },
+      {"id": 7, "value": "5" },
+      {"id": 8, "value": "8" }
+    ]
+  }
+}
